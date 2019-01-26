@@ -1,0 +1,118 @@
+digraph g1 {
+    // Graph-wide formatting (layout="sfdp", splines="curved")
+    graph [overlap="prism"; splines=true; ratio="fill"; size="11.7,8.3!"];
+    // Generic nodes/edges
+    node [color="#808080"; fontname="Fira Sans"; fontsize="11pt"; fontcolor="#004080"];
+    edge [color="#004080"; fontname="Fira Sans"; fontsize="11pt"; fontcolor="#004080"];
+    // Specific shapes for nodes
+    node [shape="rectangle"; style="rounded"]; "Trauma in Organisaties";
+    node [shape="ellipse"];
+
+    "Trauma in Organisaties" -> "Achtergrond";
+    "Trauma in Organisaties" -> "Diagnose";
+    "Trauma in Organisaties" -> "Interventie";
+
+    "Achtergrond" -> "`Rivier van integratie'";
+    "Achtergrond" -> "Relationeel weefsel";
+    "Achtergrond" -> "Levend systeem";
+
+    "Diagnose" -> "Traumakubus";
+    "Diagnose" -> "Traumaval";
+    "Diagnose" -> "Traumaradar";
+    "Diagnose" -> "Systemisch";
+    "Diagnose" -> "Fenomenologisch";
+    "Diagnose" -> "Factoren";
+    "Diagnose" -> "Symptomen";
+
+    "Interventie" -> "`Holding Space'";
+    "Interventie" -> "Traumadiamant";
+    "Interventie" -> "Plan";
+    "Interventie" -> "Ceremonies & rituelen";
+    "Interventie" -> "Law & lore";
+    "Interventie" -> "Schaduw van organisatie";
+    "Interventie" -> "Diep luisteren";
+
+    subgraph cluster_s1 {
+        "Traumakubus" -> "Fysiek";
+        "Traumakubus" -> "Emotioneel";
+        "Traumakubus" -> "Mentaal";
+        "Traumakubus" -> "Spiritueel";
+    }
+    subgraph cluster_s2 {
+        "Traumadiamant" -> "Crisismanagement";
+        "Traumadiamant" -> "Kanaliseren toxines";
+        "Traumadiamant" -> "Organisatieontwerp";
+        "Traumadiamant" -> "Heling";
+        "Kanaliseren toxines" -> "(Ont)Hechten";
+        "Kanaliseren toxines" -> "Onder- en bovenstroom";
+        "Kanaliseren toxines" -> "Rouwen";
+    }
+    subgraph cluster_s3 {
+        "`Rivier van integratie'" -> "Rigiditeit";
+        "`Rivier van integratie'" -> "Chaos";
+    }
+    subgraph cluster_s5 {
+        "`Holding Space'" -> "Veiligheid creëren";
+        "`Holding Space'" -> "Pendelen & titreren";
+        "`Holding Space'" -> "Historielijn bouwen";
+    }
+    subgraph cluster_s7 {
+        "Systemisch" -> "01) Eigendom";
+        "Systemisch" -> "02) Eigenschappen";
+        "Systemisch" -> "03) Output";
+        "Systemisch" -> "04) Relaties";
+        "Systemisch" -> "05) Emergentie";
+    }
+    subgraph cluster_s8 {
+        "Factoren" -> "Werk zelf";
+        "Factoren" -> "Organisatiecultuur";
+        "Factoren" -> "Individuele eigenschappen";
+    }
+    subgraph cluster_s9 {
+        "Fenomenologisch" -> "Begint in `zachte kant'";
+        "Fenomenologisch" -> "Zelden geïsoleerd";
+        "Fenomenologisch" -> "Terugkerende patronen";
+        "Fenomenologisch" -> "Gezondheid";
+    }
+    subgraph cluster_s10 {
+        "Relationeel weefsel" -> "Flexibiliteit";
+        "Relationeel weefsel" -> "Aanpassingsvermogen";
+        "Relationeel weefsel" -> "Coherentie";
+        "Relationeel weefsel" -> "Energie";
+        "Relationeel weefsel" -> "Stabiliteit";
+    }
+    subgraph cluster_s11 {
+        "Symptomen" -> "Afhankelijkheid";
+        "Symptomen" -> "Vecht- en vluchtgedrag";
+        "Symptomen" -> "Hoop bij twee partijen";
+        "Hoop bij twee partijen" -> "Impasse";
+        "Symptomen" -> "Geen middenweg meer";
+        "Symptomen" -> "Triggers";
+        "Triggers" -> "Irrationeel"
+        "Triggers" -> "Reëel"
+    }
+    subgraph cluster_s12 {
+        "Plan" -> "Risico's & kwetsbaarheden";
+        "Plan" -> "Tekortkomingen & eisen (scenario's)";
+        "Plan" -> "Opvangen mensen & groepen";
+        "Plan" -> "Briefen, trainen, oefenen";
+        "Plan" -> "Ervaringsgericht verfijnen";
+    }
+    subgraph cluster_s14 {
+        "Levend systeem" -> "Wil compleet zijn";
+        "Levend systeem" -> "Intern & extern uitwisselen";
+        "Levend systeem" -> "Intrinsieke ordening";
+        "Levend systeem" -> "Bestemming bereiken";
+    }
+    subgraph cluster_s15 {
+        "Diep luisteren" -> "00) Cosmetisch";
+        "Diep luisteren" -> "01) `Downloading'";
+        "Diep luisteren" -> "02) Converserend";
+        "Diep luisteren" -> "03) Empatiserend";
+        "Diep luisteren" -> "04) Emergerend";
+    }
+    subgraph cluster_s16 {
+        "Traumaval" -> "Sluipend";
+        "Traumaval" -> "Schokkend";
+    }
+}

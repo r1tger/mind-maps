@@ -1,0 +1,92 @@
+digraph g1 {
+    // Graph-wide formatting (layout="sfdp", splines="curved")
+    graph [overlap="prism"; splines=true; ratio="fill"; size="11.7,8.3!"];
+    // Generic nodes/edges
+    node [color="#808080"; fontname="Fira Sans"; fontsize="11pt"; fontcolor="#004080"];
+    edge [color="#004080"; fontname="Fira Sans"; fontsize="11pt"; fontcolor="#004080"];
+    // Specific shapes for nodes
+    node [shape="rectangle"; style="rounded"]; "Van Weerstand naar Veranderbereidheid";
+    node [shape="ellipse"];
+
+    "Van Weerstand naar Veranderbereidheid" -> "Interventies [158]";
+    "Van Weerstand naar Veranderbereidheid" -> "Weerstand";
+    "Van Weerstand naar Veranderbereidheid" -> "Veranderbereidheid";
+    "Van Weerstand naar Veranderbereidheid" -> "DINAMO [78]";
+    "Van Weerstand naar Veranderbereidheid" -> "Verandermanager [128]";
+
+    subgraph cluster_s1 {
+        "Weerstand" -> "Irrationeel [27]";
+        "Weerstand" -> "Politiek [28]";
+        "Weerstand" -> "Sociaal [30]";
+        "Weerstand" -> "Psychologisch [33]";
+
+        "Weerstand" -> "Oorzaken [38]";
+        "Weerstand" -> "Vormen [40]";
+        "Weerstand" -> "Gevolgen [45]";
+        "Weerstand" -> "Teamniveau [49]";
+        "Weerstand" -> "Organisatieniveau [50]";
+        "Weerstand" -> "Aanpak [50]";
+    }
+
+    subgraph cluster_s2 {
+        "Veranderbereidheid" -> "Sleutel voor Succes [55]";
+        "Veranderbereidheid" -> "Bron van Veranderenergie [56]";
+        "Veranderbereidheid" -> "Productieve Weerstand [59]";
+
+        "Veranderbereidheid" -> "Bouwstenen [60]";
+        "Veranderbereidheid" -> "Evidence Based [73]";
+
+        "Veranderbereidheid" -> "Waarnemen [62]";
+        "Waarnemen [62]" -> "Denken";
+        "Waarnemen [62]" -> "Voelen";
+        "Waarnemen [62]" -> "Handelen";
+
+        "Veranderbereidheid" -> "Model van Ajzen [66]"
+        "Model van Ajzen [66]" -> "Attitude (Willen)";
+        "Model van Ajzen [66]" -> "Subjectieve Norm (Moeten)";
+        "Model van Ajzen [66]" -> "Gedragscontrole (Kunnen)";
+        "Model van Ajzen [66]" -> "Intentie";
+        "Intentie" -> "Gedrag";
+    }
+
+    subgraph cluster_s3 {
+        "DINAMO [78]" -> "Alle Factoren [97]";
+
+        "DINAMO [78]" -> "MEDIA [79]";
+        "MEDIA [79]" -> "Meting";
+        "MEDIA [79]" -> "Dialoog";
+        "MEDIA [79]" -> "Actie";
+
+        "DINAMO [78]" -> "Dialoog starten [82]";
+        "DINAMO [78]" -> "Timing [82]";
+        "DINAMO [78]" -> "Afbakenen [82]";
+
+        "DINAMO [78]" -> "Factoren [90]";
+        "Factoren [90]" -> "Externe Noodzaak";
+        "Factoren [90]" -> "Timing";
+        "Factoren [90]" -> "Kennis & Ervaring";
+    }
+
+    subgraph cluster_s4 {
+        "Verandermanager [128]" -> "Double Loop Learning [132]";
+        "Verandermanager [128]" -> "Manager of Verandermanager? [133]";
+        "Verandermanager [128]" -> "Denken, Voelen, Doen [137]";
+        "Verandermanager [128]" -> "Willen, Kunnen, Moeten [140]";
+
+        "Interventies [158]" -> "Aanpak Binnen Kleurenperspectief [161]";
+        "Interventies [158]" -> "Keuzeproces [163]";
+        "Interventies [158]" -> "Bouwstenen [167]";
+        "Interventies [158]" -> "8-Stappen Model (Kotter) [199]";
+    }
+
+    subgraph cluster_s5 {
+        "8-Stappen Model (Kotter) [199]" -> "01) Vestigen Urgentie";
+        "8-Stappen Model (Kotter) [199]" -> "02) Vormen Leidende Coalitie";
+        "8-Stappen Model (Kotter) [199]" -> "03) Ontwikkelen Visie/Strategie";
+        "8-Stappen Model (Kotter) [199]" -> "04) Communiceren Visie/Strategie";
+        "8-Stappen Model (Kotter) [199]" -> "05) Creëren Draagvlak";
+        "8-Stappen Model (Kotter) [199]" -> "06) Generen Korte Termijn Successen";
+        "8-Stappen Model (Kotter) [199]" -> "07) Niet Verslappen, Stug Doorgaan";
+        "8-Stappen Model (Kotter) [199]" -> "08) Verandering Beklijven";
+    }
+}
